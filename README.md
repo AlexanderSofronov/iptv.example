@@ -44,12 +44,12 @@ Here is an example of extended M3U playlist:
     #EXTINF:-1 group-title="Custom" tvg-logo="https://cdn1.iconfinder.com/data/icons/Primo_Icons/PNG/128x128/video.png",My Custom channel
     http://example.com/channel4
 
-url-tvg - URL for EPG in JTV (zip) or XMLTV (xml, gz) format. Several URLs may be specified separated by comma (',')
-group-title - Title for channels group
-tvg-logo - Channel logo name (from internal database) or URL to the image that will be used as channel logo
-tvg-name - Name of the channel from EPG, should be equal to the value of "display-name" tag in XMLTV
-tvg-id - XMLTV channel id. When both tvg-id and tvg-name are specified for the same channel, tvg-id will be used.
-tvg-shift - Shift in hours for EPG
+* url-tvg - URL for EPG in JTV (zip) or XMLTV (xml, gz) format. Several URLs may be specified separated by comma (',')
+* group-title - Title for channels group
+* tvg-logo - Channel logo name (from internal database) or URL to the image that will be used as channel logo
+* tvg-name - Name of the channel from EPG, should be equal to the value of "display-name" tag in XMLTV
+* tvg-id - XMLTV channel id. When both tvg-id and tvg-name are specified for the same channel, tvg-id will be used.
+* tvg-shift - Shift in hours for EPG
 
 License
 --------
