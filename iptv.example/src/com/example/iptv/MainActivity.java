@@ -42,6 +42,10 @@ public class MainActivity
             // If "package" extra is set, IPTV Core app will be able to show your app logo and name 
             intent.putExtra("package", getPackageName());
 
+            // Uncomment the lines below if you want to set custom timeouts for http connections
+            // intent.putExtra("http_connect_timeout", 30 * 1000); // value for URLConnection.setConnectTimeout() in milliseconds
+            // intent.putExtra("http_read_timeout", 30 * 1000); // value for URLConnection.setReadTimeout() in milliseconds
+
             startActivity(intent);
             finish();
         } catch (ActivityNotFoundException e) {
