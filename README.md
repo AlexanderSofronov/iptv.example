@@ -88,7 +88,7 @@ Intent API which is used for launching IPTV Core from third-party package (launc
             Type: String
             Example: intent.putExtra("http_user_agent", "<Custom user agent>")
             
-            Custom value for "User-Agent" http request property
+            Custom value for "User-Agent" http request property which is used for loading playlist and EPG (not video streams)
             
         preferred_player_package (Since IPTV Core 3.3.2)
             Type: String
