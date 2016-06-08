@@ -36,15 +36,14 @@ public class MainActivity
             intent.setClassName(_IPTV_CORE_PACKAGE_NAME, _IPTV_CORE_CLASS_NAME);
 
             // Set your playlist url and uncomment the lines below   
-            //String playlistUrl = "<PLAYLIST URL>";
-            //intent.setData(Uri.parse(playlistUrl));
+            // String playlistUrl = "<PLAYLIST URL>";
+            // intent.setData(Uri.parse(playlistUrl));
             
-            // If "package" extra is set, IPTV Core app will be able to show your app logo and name 
+            // If "package" extra is set, IPTV Core will be able to show your app name as a title
             intent.putExtra("package", getPackageName());
-
-            // Uncomment the lines below if you want to set custom timeouts for http connections
-            // intent.putExtra("http_connect_timeout", 30 * 1000); // value for URLConnection.setConnectTimeout() in milliseconds
-            // intent.putExtra("http_read_timeout", 30 * 1000); // value for URLConnection.setReadTimeout() in milliseconds
+            
+            // EPG URL can be set either by "url-tvg" parameter in your playlist or by the following extra (supported since IPTV Core 3.3)
+            // intent.putExtra("url-tvg", "<EPG URL>");
 
             startActivity(intent);
             finish();
