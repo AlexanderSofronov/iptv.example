@@ -51,6 +51,54 @@ Here is an example of extended M3U playlist:
 * tvg-id - XMLTV channel id. When both tvg-id and tvg-name are specified for the same channel, tvg-id will be used.
 * tvg-shift - Shift in hours for EPG
 
+Intent API
+--------
+Intent API which is used for launching IPTV Core from third-party package (launcher app)
+
+    Data:
+        Playlist URL
+        
+    Extras (optional):
+        package
+            Type: String
+            Example: intent.putExtra("package", getPackageName());
+            
+            "package" extra is used for sending package name of your app to IPTV Core. If this extra is set, 
+            IPTV Core will be able to show your app name as a title
+            
+        url-tvg (Since IPTV Core 3.3)
+            Type: String
+            Example: intent.putExtra("url-tvg", "<Your EPG URL>");
+            
+            EPG URL can be set either by "url-tvg" parameter in your playlist or by "url-tvg" extra
+            
+        http_connect_timeout
+            Type: int
+            Example: intent.putExtra("http_connect_timeout", 30 * 1000); // Set http connect timeout to 30 seconds
+            
+            Http connect timeout for loading playlist and EPG (not video streams)
+        
+        http_read_timeout
+            Type: int
+            Example: intent.putExtra("http_read_timeout", 30 * 1000); // Set http read timeout to 30 seconds
+            
+            Http read timeout for loading playlist and EPG (not video streams)
+            
+        http_user_agent (Since IPTV Core 3.3.1)
+            Type: String
+            Example: intent.putExtra("http_user_agent", "<Custom user agent>")
+            
+            Custom value for "User-Agent" http request property
+            
+        preferred_player_package (Since IPTV Core 3.3.2)
+            Type: String
+            Example: intent.putExtra("preferred_player_package", "org.videolan.vlc"); // Set VLC as preferrred video player
+            
+            Preferred video player should be one of the supported players that can be found in IPTV Core settings.
+            At the first launch the app will check if one of supported players is installed. 
+            When no supported players found, the user will be forced to install the preferred video player.
+            By default, the app uses MX Player as preferred player.
+
 License
 --------
 
