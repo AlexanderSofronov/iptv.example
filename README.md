@@ -99,6 +99,12 @@ Intent API which is used for launching IPTV Core from third-party package (launc
             When no supported players found, the user will be forced to install the preferred video player.
             By default, the app uses MX Player as preferred player.
 
+        hide_all_channels_tab (Since IPTV Core 3.9.4)
+            Type: boolean
+            Example: intent.putExtra("hide_all_channels_tab", true);
+            
+            Option to hide "All Channels" tab. This option works only when you have categories in your playlist.
+
 License
 --------
 
